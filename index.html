@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="own_style.css"/>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"/> -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <section class="box_upper">
+          <h1>Expense Tracker</h1>
+
+          <div class="balance">
+            <h2 id="netAmount">&#8377; 0</h2>
+            <!-- ₹ -->
+            <h3>Your Balance</h3>
+          </div>
+        </section>
+        <div class="transaction_container">
+          <h3>Transactions&nbsp;
+            <a href="FormDisplay.html">History</a></h3>
+            <!-- <ul>
+              <li class="list active"> -->
+              <!-- </li>
+            </ul> -->
+            <hr />
+          <div class="transactions"></div>
+        </div>
+        <section class="transaction_form">
+          <h3>Add Transactions</h3>
+          <form id="transactionForm">
+            <div class="inputs">
+              <div class="form_control">
+                <label for="">Category</label>
+                <!-- <input placeholder="Enter Description" type="text" name="text" id="text"/> -->
+                <select class="option" type="text" name="text" id="text" required>
+                  <option class="active">Select</option>
+                  <option>Salary</option>
+                  <option>Sales</option>
+                  <option>Furniture</option>
+                  <option>Electronic Gadgets</option>
+                  <option>Grocery</option>
+                  <option>travel</option>
+                  <option>Entertainment</option>
+                </select>
+              </div>
+              <div class="form_control">
+                <label for="date">Date</label>
+                <input placeholder="Enter Date"  type="date"  name="date"  id="date" required />
+              </div>
+              <div class="form_control">
+                <label for="amount">Amount</label>
+                <input placeholder="Enter Amount"  type="number"  name="amount"  id="amount" required />
+              </div>
+            </div>
+
+            <div class="buttons_container">
+              <button type="submit" id="earnBtn">
+                <p id="earning">&#8377; 0</p>
+                <p>Earnings</p>
+              </button>
+              <button type="submit" id="expBtn">
+                <p id="expense">&#8377; 0</p>
+                <p>Expense</p>
+              </button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="./own_script.js" defer></script>
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+  </body>
+</html>
