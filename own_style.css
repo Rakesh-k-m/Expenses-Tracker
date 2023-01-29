@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+:root{
+  --primary: #3a3a3a;
+  --primary-dark: #302d2d;
+  --green: #008104;
+  --red: #ff0000;
+}
+*{
+  margin: 0;
+  padding: center;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+html{
+  font-family: "Poppins",sans-serif;
+}
+body{
+  background-color: var(--primary);
+}
+.container{
+display: grid;
+place-items: center;
+height: 100vh;
+}
+.box{
+  background-color: white;
+  width: 450px;
+  height: 830px;
+  padding: 20px;
+  background-color: var(--primary-dark);
+  color: white;
+  position: absolute;
+}
+p{
+  font-size: 14px;
+}
+h1{
+  font-weight: 500;
+  font-size: 32px;
+}
+h2{
+  font-weight: 400;
+  font-size: 24px;
+}
+h3{
+  font-weight: 400;
+  font-size: 20px;
+}
+.box_upper,
+.balance{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.balance{
+ margin-top: 20px; 
+}
+.transactions_container{
+  margin-top: 10px;
+  justify-content: space-around;
+}
+.transaction_container ul li {
+list-style: none;
+background-color: white !important;
+align-self: flex-end;
+align-items: float-left;
+}
+.transaction_container > h3 > a {
+  color: white !important;
+  /* justify-content: space-around; */
+}
+.transactions, .option{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.transaction, .option{
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+.transaction .left{
+  padding: 7px;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content{
+  display: flex;
+}
+.lower{
+  padding: 10px;
+  /* display: flex; */
+  gap: 10px;
+  display: none;
+}
+.lower img {
+  height: 20px;
+}
+.showTransaction{
+  display: flex;
+}
+.status{
+  background-color: var(--green);
+  display: grid;
+  place-items: center;
+  color: white;
+  min-height: 40px;
+  min-width: 40px;
+}
+.credit{
+  background-color: var(--green);
+}
+.debit{
+  background-color: var(--red);
+}
+.transaction_form{
+  /* height: 200px; */
+  background-color: white;
+  position: absolute;
+  padding: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: black;
+}
+.transaction_form h3{
+  margin-bottom: 10px;
+}
+.transaction_container ul .list li {
+  background-color: var(--primary-dark);
+  justify-content: space-around;
+  color: white;
+}
+.form_control{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form_control:first-child{
+  flex: 3;
+}
+.inputs, .option{
+  display: flex;
+  gap: 10px;
+  /* justify-content: space-around; */
+  align-items: center;
+}
+form input, .option{
+  padding: 20px 15px 15px;
+  outline: 1px solid transparent;
+  border: 1px solid black;
+  width: 100%;
+}
+form input:focus-visible{
+  outline: 1px solid var(--primary-dark);
+  border: 1px solid var(--primary-dark);
+}
+.buttons_container{
+  display: flex;
+  margin-top: 20px;
+}
+.buttons_container button{
+  width: 100%;
+  height: 45px;
+  color: white;
+  border: none;
+  opacity: 0.9;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.buttons_container button:hover{
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+#earnBtn{
+  background-color: var(--green);
+  /* color: white; */
+}
+#expBtn{
+  background-color: var(--red);
+  /* color: white; */
+}
+@media(max-width:500px){
+  .box{
+    width: 95%;
+  }
+  .box h1{
+    font-size: 24px;
+  }
+  .upper p{
+    font-size: 14px;
+}
+
+}
