@@ -113,9 +113,9 @@ const addTransaction = (e) => {
 
   
 };
-const updateLocalStorage = () => {
-  return localStorage.getItem('transactions');
-}
+//const updateLocalStorage = () => {
+  //return localStorage.getItem('transactions');
+//}
 
 const handleDisplay = (id) => {
   const data = state.transactions.get((g) => g.id ===id );
@@ -155,7 +155,7 @@ dispalyForm.innerHTML = `
     <td>${net}</td>
   </tr>
 `;
-updateLocalStorage();
+//updateLocalStorage();
 renderTransactions();
 addTransaction();
 
